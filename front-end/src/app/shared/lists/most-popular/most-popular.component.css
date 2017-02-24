@@ -1,0 +1,16 @@
+.list-wrap {
+  align-content: center;
+}
+
+.list-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.list-heading {
+  text-align: left;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 2px solid #080708;
+}

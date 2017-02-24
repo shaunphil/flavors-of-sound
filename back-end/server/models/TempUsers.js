@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 var TempUserSchema = new mongoose.Schema({
+  firstName: String,
   email: String,
-  password: String,
-  GENERATED_VERIFYING_URL: String
+  verificationSlug: String
 });
 
 module.exports = mongoose.model('TempUser', TempUserSchema);

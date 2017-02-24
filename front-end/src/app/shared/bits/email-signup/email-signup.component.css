@@ -1,0 +1,116 @@
+#signup-wrap {
+  background-color: #080708;
+  align-content: center;
+  padding-top: 15px;
+}
+
+#signup-content {
+  margin: auto;
+  max-width: 600px;
+  padding: 15px;
+  padding-top: 0px;
+  padding-left: 125px;
+
+  background-image: url('/assets/images/ice-cream-cone.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#signup-header {
+  margin: 0px;
+  color: #e6e8e6;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#signup-header-small {
+  margin: 0px;
+  color: #2e5ed1;
+  font-weight: bold;
+}
+
+#error-message {
+  margin: 0px;
+  color: #df2935;
+  font-weight: bold;
+}
+
+.text-input {
+  background-color: #e6e8e6;
+
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  outline: none;
+  border:  none;
+
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#subscribe-button {
+  background-color: #df2935;
+  color: #e6e8e6;
+
+  border: none;
+  outline: none;
+  padding: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s ;
+  transition: all ease 0.5s;
+
+  cursor: pointer;
+}
+
+#subscribe-button:hover {
+  background-color: #ff2f3d;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s ;
+  transition: all ease 0.5s ;
+}
+
+@media only screen and (max-width: 750px) {
+  #signup-content {
+    background-image: none;
+    padding: 15px;
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #signup-content {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    box-sizing: border-box;
+  }
+
+  .text-input {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left:  auto;
+    box-sizing: border-box;
+  }
+
+  #subscribe-button {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left:  auto;
+  }
+}

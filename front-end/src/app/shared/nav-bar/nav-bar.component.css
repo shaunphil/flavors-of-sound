@@ -1,0 +1,61 @@
+#nav-bar-wrap {
+  background-color: #e6e8e6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-content: center;
+}
+
+#nav-bar {
+  color: #080708;
+  margin: auto;
+}
+
+#fos-logo {
+  height: 50px;
+  padding-right:  40px;
+  padding-left:   40px;
+  padding-top:    5px;
+}
+
+.nav-bar-item {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all ease 0.1s;
+  -moz-transition:    all ease 0.1s;
+  -o-transition:      all ease 0.1s;
+  -ms-transition:     all ease 0.1s;
+  transition:         all ease 0.1s;
+}
+
+.nav-bar-item:hover {
+  padding-bottom: 10px;
+}
+
+.nav-bar-item:hover:not(.nav-bar-active) {
+  border-bottom: 4px solid #2e5ed1;
+  color: #2e5ed1;
+}
+
+.nav-bar-active {
+  border-bottom: 4px solid #080708;
+  padding-bottom: 6px;
+}
+
+@media only screen and (max-width: 500px) {
+  #logo-cell {
+    display: none;
+  }
+
+  .nav-bar-item {
+    font-size: 16px;
+  }
+
+  .nav-bar-active {
+    border-bottom: 4px solid #df2935;
+    color: #df2935;
+    padding-bottom: 6px;
+  }
+}

@@ -1,0 +1,10 @@
+<div id="list-wrap">
+  <div id="list-content">
+    <h3 id="categories-list-header">Categories</h3>
+    <div class="list-item" *ngFor="let category of categories">
+      <category-item
+        [category]="category"
+        (click)="transitionToCategory(category.name)"></category-item>
+    </div>
+  </div>
+</div>

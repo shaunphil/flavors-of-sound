@@ -1,0 +1,11 @@
+<div class="list-wrap" (window:resize)="onWindowResize($event)">
+  <div class="list-content">
+    <h3 class="list-heading">{{ title }}</h3>
+    <div class="list-wrap">
+      <article-item
+        *ngFor="let article of displayedArticles"
+        [article]="article"></article-item>
+    </div>
+    <button class="load-more-button" (click)="loadMoreButtonClicked()">Load More</button>
+  </div>
+</div>

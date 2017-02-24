@@ -1,0 +1,19 @@
+<div id="signup-wrap">
+  <div id="signup-content">
+    <h3 id="signup-header">Get the Latest Scoop</h3>
+    <p  id="signup-header-small" *ngIf="!error && !userHasSubscribed">
+      Sign up for the Flavors of Sound Newsletter
+    </p>
+    <p id="signup-header-small" *ngIf="!error && userHasSubscribed">
+      Thank you for signing up! A confirmation email was sent to the address you provided.
+    </p>
+    <p id="error-message" *ngIf="error">
+      *{{ errorMessage }}
+    </p>
+    <div id="signup-form">
+      <input class="text-input" type="text" [(ngModel)]="user.firstName" placeholder="First Name" />
+      <input class="text-input" type="text" [(ngModel)]="user.email"     placeholder="Email Address" />
+      <button id="subscribe-button" (click)="subscribeUser()">Subscribe</button>
+    </div>
+  </div>
+</div>

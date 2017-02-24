@@ -1,0 +1,132 @@
+#home-header-content {
+  padding: 20px;
+}
+
+#big-text {
+  background-color: #080708;
+  color: #e6e8e6;
+
+  padding: 15px;
+  margin: 0px;
+
+  font-size: 60px;
+  letter-spacing: 1px;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  background-image: url('/assets/images/shaun-speakers-head-bw.jpg');
+  background-repeat: no-repeat;
+  background-size:   contain;
+  background-position: right bottom;
+}
+
+#small-text {
+  padding: 15px;
+  margin: 0px;
+
+  font-size: 24px;
+  font-weight: bold;
+  color: #080708;
+}
+
+#button-wrap {
+  text-align: center;
+  width: 100%;
+}
+
+#get-started-button {
+  background-color: #2e5ed1;
+  color: #e6e8e6;
+  cursor: pointer;
+
+  border:  none;
+  outline: none;
+  padding: 15px;
+
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition:    all ease 0.5s;
+  -o-transition:      all ease 0.5s;
+  -ms-transition:     all ease 0.5s;
+  transition:         all ease 0.5s;
+}
+
+#get-started-button:hover {
+  box-shadow: 0px 10px 15px #888888;
+  background-color: #3873ff;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition:    all ease 0.5s;
+  -o-transition:      all ease 0.5s;
+  -ms-transition:     all ease 0.5s;
+  transition:         all ease 0.5s;
+}
+
+@media only screen and (max-width: 449px) {
+  #big-text {
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  #small-text {
+    font-size: 16px;
+  }
+
+  #get-started-button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* For non-mobile devices */
+@media only screen and (min-width: 750px) {
+  #home-header-wrap {
+    background-image: url('/assets/images/shaun-speakers-head.gif');
+    background-repeat: no-repeat;
+    background-size:   contain;
+    background-position: center bottom;
+  }
+
+  #home-header-wrap {
+    height: 40vw;
+    background-position: right bottom;
+    margin-right: 5vw;
+  }
+
+  #home-header-content {
+    padding:   1.5vw;
+    max-width: 50%;
+  }
+
+  #big-text {
+    padding: 1.5vw;
+    width: 50vw;
+    font-size: 5vw;
+    line-height: 5.25vw;
+
+    background-image: none;
+  }
+
+  #small-text {
+    padding: 1.5vw;
+    max-width: 50vw;
+    font-size: 2vw;
+  }
+
+  #button-wrap {
+    max-width: 50vw;
+  }
+
+  #get-started-button {
+    padding: 1.5vw;
+    font-size: 2vw;
+  }
+
+  #get-started-button:hover {
+    box-shadow: 0px 1vw 1.5vw #888888;
+  }
+}

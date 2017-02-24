@@ -1,0 +1,10 @@
+<div id="list-wrap">
+  <div id="list-content">
+    <h3 id="latest-header">Latest</h3>
+    <div class="list-item" *ngFor="let article of articles">
+      <article-item
+        [article]="article"
+        (click)="transitionToArticle(article.slug)"></article-item>
+    </div>
+  </div>
+</div>

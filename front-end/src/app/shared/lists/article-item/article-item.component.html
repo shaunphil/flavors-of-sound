@@ -1,0 +1,12 @@
+<div class='article-item-wrap'>
+  <div class='article-item-content'>
+    <img class='article-item-icon' src='assets/images/writing-icon.jpg' />
+    <h3 class='article-item-title'>{{ article.title }} - <span class="article-item-subtitle">{{ article.subtitle }}</span></h3>
+    <p class='article-item-intro'>Once upong a tiame there was a little monkey and he was very curious and he was...</p>
+    <div class='read-more-button-wrap'>
+      <button
+        class='read-more-button'
+        (click)="transitionToArticle(article.slug)">Read More...</button>
+    </div>
+  </div>
+</div>

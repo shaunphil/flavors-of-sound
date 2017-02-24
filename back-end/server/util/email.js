@@ -1,25 +1,31 @@
-const nodemailer = require('nodemailer');
+var nodemailer = require('nodemailer');
+var mg = require('nodemailer-mailgun-transport');
+var msg = require('./messages.js');
 
-let transporter = nodemailer.createTransport({
-  service: 'gmail',
+// This is your API key that you retrieve from www.mailgun.com/cp (free up to 10K monthly emails)
+var auth = {
   auth: {
-    name: 'spwassel01@gmail.com',
-    pass: 'goateeman032694'
+    api_key: 'key-067e965b571a6be944dbb7a85b978ed8',
+    domain: 'mg.shaunwassell.com'
   }
-});
+}
+
+var nodemailerMailgun = nodemailer.createTransport(mg(auth));
 
 module.exports = (options, callback) => {
-  let mailOptions = {
-    from:    options.from,
-    to:      options.to,
+  nodemailerMailgun.sendMail({
+    from: options.from,
+    to:   options.to,
     subject: options.subject,
-    text:    options.text,
-    html:    options.html
-  }
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) return callback(error);
-    console.log('Message %s sent: %s', info.messageId, info.response);
-    return callback(null);
+    text: options.text,
+    html: options.html
+  }, function (err, info) {
+    if (err) {
+      console.log('Error: ' + err);
+      callback(err);
+    } else {
+      console.log('Response: ' + info);
+      callback(null, msg.SUCCESS);
+    }
   });
 }

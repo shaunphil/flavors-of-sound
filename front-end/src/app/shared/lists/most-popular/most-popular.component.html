@@ -1,0 +1,11 @@
+<div class="list-wrap">
+  <div class="list-content">
+    <h3 class="list-heading">Popular Articles</h3>
+    <div class="list-wrap">
+      <article-item
+        *ngFor="let article of articles"
+        [article]="article"
+        (click)="transitionToArticle(article.slug)"></article-item>
+    </div>
+  </div>
+</div>
