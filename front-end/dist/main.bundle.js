@@ -24,7 +24,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var ArticlesService = (function () {
     function ArticlesService(http) {
         this.http = http;
-        this.articlesURL = 'http://localhost:3000/api/articles/';
+        this.articlesURL = 'http://ec2-40-52-207-198.us-west-2.compute.amazonaws.com:3000/api/articles/';
     }
     ArticlesService.prototype.getArticles = function () {
         return this.http.get(this.articlesURL)
