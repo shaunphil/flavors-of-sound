@@ -11,13 +11,7 @@ const app = express();
 const api = require('./server/routes/api');
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://ec2-52-40-207-198.us-west-2.compute.amazonaws.com:27017/flavors-of-sound");
-
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+mongoose.connect("mongodb://localhost:27017/flavors-of-sound");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
