@@ -6,7 +6,7 @@ import { ARTICLES } from './mock-articles';
 
 @Injectable()
 export class ArticlesService {
-  private articlesURL = 'http://ec2-40-52-207-198.us-west-2.compute.amazonaws.com:3000/api/articles/';
+  private articlesURL = 'http://ec2-52-40-207-198.us-west-2.compute.amazonaws.com:3000/api/articles/';
 
   constructor(private http: Http) { }
 
